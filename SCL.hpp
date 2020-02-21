@@ -3,38 +3,14 @@
 
 namespace scl
 {
-	long absolute(
-		const long n
-	);
-	
-	bool isEven(
-		const long n
-	);
-	
-	double addition(
-		double a,
-		double b
-	);
-	
-	double substraction(
-		double a,
-		double b
-	);
-	
-	double multiplication(
-		double a,
-		double b
-	);
-	
-	double division(
-		double a,
-		double b
-	);
-	
-	double power(
-		long base,
-		long exponent
-	);
+	long absolute(const long n);
+	bool isEven(const long n);
+	double addition(double x, double y);
+	double substraction(double x, double y);
+	double multiplication(double x, double y);
+	double division(double x, double y);
+	double power(double base, double exponent);
 }
+
 
 #endif

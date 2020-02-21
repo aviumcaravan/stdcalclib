@@ -7,65 +7,57 @@ created for personal use to save time
 
 #include "SCL.hpp"
 
-long scl::absolute(const long n)
+namespace scl
 {
-	if (n < 0)
+	long absolute(const long n)
 	{
-		return -n;
+		if (n < 0)
+			return (-n);
+		else
+			return n;
 	}
-	else
+
+	bool isEven(const long n)
 	{
-		return n;
+		if ((n % 2 == 0) && (n != 0))
+			return true;
+		else
+			return false;
 	}
-}
-	
-bool scl::isEven(const long n)
-{
-	if (n % 2 == 0 && n != 0)
+
+	double addition(double x, double y)
 	{
-		return true;
+		return x + y;
 	}
-	else
+
+	double substraction(double x, double y)
 	{
-		return false;
+		return x - y;
 	}
-}
-	
-double scl::addition(double a, double b)
-{
-	return (a + b);
-}
-	
-double scl::substraction(double a, double b)
+
+	double multiplication(double x, double y)
 	{
-		return (a - b);
+		return x * y;
 	}
-	
-double scl::multiplication(double a, double b)
-{
-	return (a * b);
-}
-	
-double scl::division(double a, double b)
-{
-	if (b != 0)
+
+	double division(double x, double y)
 	{
-		return (a / b);
+		if (y != 0)
+			return x / y;
+		else
+		{
+			unsigned exitCode = 1;
+			return exitCode;
+		}
 	}
-	else
+
+	double power(double base, double exponent)
 	{
-		return 0;
+		double result = 1;
+
+		for (int n = 0; n < exponent; n++)
+			result *= base;
+
+		return result;
 	}
-}
-	
-double scl::power(long base, long exponent)
-{
-	double result = 1;
-		
-	for (int i = 0; i < exponent; i++)
-	{
-		result *= base;
-	}
-		
-	return result;
 }
