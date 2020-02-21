@@ -12,5 +12,4 @@ namespace scl
 	double power(double base, double exponent);
 }
 
-
 #endif
